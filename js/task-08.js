@@ -7,7 +7,7 @@ function onFormSubmit(event) {
     const { email, password } = event.currentTarget.elements;
     const formObject = {};
 
-    if (!Number(email.value.length) && !Number(password.value.length)) {
+    if (!email.value.trim() && !password.value.trim()) {
         alert('Заповніть поля!')
     } else {
         const formData = new FormData(event.currentTarget);
